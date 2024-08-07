@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+  text-decoration: none !important;
+}
+body, html{
+  overflow-x: hidden !important;
+}
+.w-fit{
+  height: fit-content !important;
+  width: fit-content !important;
+}
+
+.bg-brown{
+background-color: #4D352B;
+}
+.title{
+  color: #CE8155;
+}
+.zoom {
+  overflow: hidden; /* Add this line */
+  overflow-x: hidden;
+  
+}
+.zoom img{
+ transition: .5s;
+ width: 100%; 
+ height: auto; 
+ display: block; 
+ 
+}
+.zoom:hover img{
+  transform: scale(1.3); 
+  transition: .5;
+  overflow: hidden;
+}
+#form-bg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/9.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+}
+#feed-bg{
+  background-image: url("../images/5.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+}
+/* //////////////////////////////////////scrollToTopBtn////////////////////////////////////////////////// */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #4D352B;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+}
+    #scrollToTopBtn i {
+        font-size: 24px; 
+    }
+    #scrollToTopBtn:hover {
+        background-color: #CE8155; 
+        transition: .5s;
+    }
+    #scrollToTopBtn.show {
+        display: block;
+        opacity: 1;
+    }
+ /* //////////////////////////////////////whatsappBtn////////////////////////////////////////////////// */
+ #whatsappBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #25d366;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+}
+#whatsappBtn i {
+  font-size: 24px;
+}
+#whatsappBtn:hover {
+  background-color: #128c7e;
+}
+#whatsappBtn.show {
+  display: flex;
+  opacity: 1;
+}
+
+ /* //////////////////////////////////////Chatbot////////////////////////////////////////////////// */
+ /* Chatbot button styles */
+ #chatbotBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px; 
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 100;
+  opacity: 0;
+}
+#chatbotBtn i {
+  font-size: 24px;
+}
+#chatbotBtn:hover {
+  background-color: #0056b3;
+}
+/* Chat container styles */
+.chat-container {
+background: #4D352B;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 400px;
+max-width: 100%;
+padding: 20px;
+display: none; /* Hidden by default */
+flex-direction: column;
+gap: 10px;
+position: fixed;
+bottom: 140px; /* Positioned above Chatbot button */
+left: 30px;
+z-index: 101; /* Above buttons */
+}
+
+#chatbox {
+background: #e9e9e9;
+border-radius: 8px;
+padding: 10px;
+overflow-y: auto;
+max-height: 300px;
+}
+
+#chat-log {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.message {
+padding: 10px;
+border-radius: 8px;
+}
+
+.user {
+align-self: flex-end;
+background: #007bff;
+color: white;
+}
+
+.bot {
+align-self: flex-start;
+background: #dcdcdc;
+}
+
+.question {
+align-self: flex-start;
+background: #ffc107;
+color: black;
+border: none;
+padding: 10px;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.question:hover {
+background: #e0a800;
+}
+
+#user-input {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 8px;
+flex-grow: 1;
+}
+
+#send-button {
+padding: 10px 20px;
+border: none;
+background: #CE8155;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+}
+
+/* Show buttons when scrolled down */
+#chatbotBtn.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Show chat container when chatbot button is clicked */
+.chat-container.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* //////////////////////////////////////header////////////////////////////////////////////////// */
+header{
+    min-height: 100vh;
+    background-image: url("../images/5.png");
+    background-position: center center;
+    background-size: cover;
+   background-attachment: fixed;
+  }
+  .logo{
+    width: 15%;
+  }
+  /* //////////////////////////////////////services////////////////////////////////////////////////// */
+.services .crd .iconn i, .item i {
+    border: 5px solid #f4f4f4;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .services .crd:hover  .iconn i,.item i:hover {
+    border: 5px solid #4D352B;
+    background-color: #4D352B;
+    margin: auto;
+    color: white;
+    transition: 0.5s;
+  }
+   /* //////////////////////////////////////box-shadow////////////////////////////////////////////////// */
+.card-wh-shadow{
+  box-shadow: 4px 4px 15px rgb(255, 255, 255);
+}
+   /* //////////////////////////////////////scroll-bar////////////////////////////////////////////////// */
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #4D352B; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CE8155; 
+  border-radius: 15px; 
+  border: 3px solid #4D352B; 
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: #CE8155 #4D352B; 
+}
+   /* //////////////////////////////////////video-border////////////////////////////////////////////////// */
+.video-border{
+  background-color:#CE8155 ;
+   border: 15px solid #CE8155 !important;
+   border-radius: 10px;
+}
+   /* //////////////////////////////////////submit-color////////////////////////////////////////////////// */
+
+.submit-color{
+  padding: 5px !important;
+  background-color: transparent !important;
+  border: 3px solid #4D352B !important;
+  color: #4D352B !important;
+  border-radius: 5px;
+  transition: .3s;
+}
+.submit-color:hover{
+  padding: 5px !important;
+  background-color: #4D352B  !important;
+  border: 3px solid #4D352B !important;
+  color: white !important;
+  transition: .3s;
+
+}
